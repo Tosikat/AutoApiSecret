@@ -10,13 +10,13 @@ on:
   #  branches: 
   #    - master
   schedule:
-    - cron: "12 */1 * * *"
+    - cron: "26 */1 * * *"
+  watch:
+    types: [started]
   workflow_run:
     workflows: ["autoapi"]
     types:
       - completed
-  watch:
-    types: [started]
    
 jobs:
   build:
