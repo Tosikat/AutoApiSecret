@@ -10,7 +10,7 @@ on:
   #  branches: 
   #    - master
   schedule:
-    - cron: "54 */1 * * *"
+    - cron: "2 */1 * * *"
   workflow_run:
     workflows: ["autoapi"]
     types:
@@ -23,7 +23,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
+   
+    # if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
+    if: github.event.sender.login == 'Tosikat'
     steps:
     - name: Checkout
       uses: actions/checkout@master
