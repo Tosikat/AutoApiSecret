@@ -14,6 +14,8 @@ import json,sys,time
 
 path=sys.path[0]+r'/1.txt'
 num1 = 0
+id="96dbe519-9ad3-4376-945f-42bbdaa42f63"
+secret="XSp8Q~txAOI4Y5IoYZHWLqLr6X45QBwbKo20xauk"
 
 def gettoken(refresh_token):
     headers={'Content-Type':'application/x-www-form-urlencoded'
