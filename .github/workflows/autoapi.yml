@@ -19,6 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
     steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v4 # 使用 v4 版本，或者使用 @latest
+      with:
+        node-version: 16
     - name: Checkout
       uses: actions/checkout@master
     - name: Set up Python #安装python
