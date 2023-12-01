@@ -12,7 +12,7 @@ on:
   schedule:
     - cron: "12 */1 * * *"
   workflow_run:
-    workflows: ["autoapi"]
+    workflows: ["Auto Api Secret"]
     types:
       - completed
   watch:
